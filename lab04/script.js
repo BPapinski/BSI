@@ -9,9 +9,12 @@ function clearDisplay(){
 
 
 function numberClicked(number){
+    if(expresion.length >= 20){
+        alert("you can enter no more than 20 characters")
+        return;
+    }
     lastCharIsSymbol = false;
     expresion += number
-
     document.getElementById("expression").innerHTML = expresion
 }
 
@@ -48,9 +51,6 @@ function isSymbol(char){
     else if(char == "/"){
         return true;
     }
-
-
-
 }
 
 function commaClicked(symbol){
