@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+            
+        }
+
+        .flex-item{
+            width: 100%;
+
+        }
+    </style>
+
+    <div class="container">
+        <div class="flex-item">
+            <form>
+                <div>
+                    <label>Podaj Imię:</label><br>
+                    <input type="text" id="imie" name="imie" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Podaj Nazwisko:</label><br>
+                    <input type="text" id="nazwisko" name="nazwisko" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Podaj Ulicę:</label><br>
+                    <input type="text" id="ulica" name="ulica" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Podaj Numer Domu:</label><br>
+                    <input type="text" id="nrDomu" name="nrDomu" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Podaj Numer Mieszkania:</label><br>
+                    <input type="text" id="nrMieszkania" name="nrMieszkania" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Podaj Numer Telefonu:</label><br>
+                    <input type="number" id="nrTelefonu" name="nrTelefonu" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Podaj Date Urodzenia:</label><br>
+                    <input type="datetime-local"><br>
+                </div>
+                <div>
+                    <label>Czy posiadasz prawo jazdy ?</label>
+                    <input type="checkbox"><br>
+                </div>
+                <div>
+                    <label>Hasło</label><br>
+                    <input type="password"><br>
+                </div>
+                <div>
+                    <label for="cars">Płeć:</label>
+                </div>
+                <div>
+                    <select name="płeć" id="płeć">
+                        <option value="volvo">Kobieta</option>
+                        <option value="saab">Mężczyzna</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label>Miasto:</label><br>
+                    <input type="text" id="Miasto" name="Miasto" placeholder="..."><br>
+                </div>
+                <div>
+                    <label>Państwo:</label><br>
+                    <input type="text" id="Państwo" name="Państwo" placeholder="..."><br>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
