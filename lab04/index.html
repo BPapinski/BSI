@@ -10,47 +10,49 @@
 <body>
     <div class="container">
         <div class="column"></div>
-        <div class="column calculator">
-            <div class="row">
-                <div class="calculator-display">
-                    <h1 id="expression">expression</h1>
+        <div class="column">
+            <div class="calculator">
+                <div class="row">
+                    <div class="calculator-display">
+                        <h1 id="expression">expression</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="calculator-button"></div>
+                    <div class="calculator-button"></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="clearDisplay()"><p>C</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('/')"><p>÷</p></div>
+                </div>
+                <div class="row">
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('7')"><p>7</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('8')"><p>8</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('9')"><p>9</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('*')"><p>×</p></div>
+                </div>
+                <div class="row">
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('4')"><p>4</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('5')"><p>5</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('6')"><p>6</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('-')"><p>-</p></div>
+                </div>
+                <div class="row">
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('1')"><p>1</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('2')"><p>2</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('3')"><p>3</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('+')"><p>+</p></div>
+                </div>
+                <div class="row">
+                    <div class="calculator-button"><p></p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="numberClicked('0')"><p>0</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="commaClicked('.')"><p>.</p></div>
+                    <div class="calculator-button calculator-button-clickable" onclick="calculate()"><p>=</p></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="calculator-button"></div>
-                <div class="calculator-button"></div>
-                <div class="calculator-button calculator-button-clickable" onclick="clearDisplay()"><p>C</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('/')"><p>÷</p></div>
-            </div>
-            <div class="row">
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('7')"><p>7</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('8')"><p>8</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('9')"><p>9</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('*')"><p>×</p></div>
-            </div>
-            <div class="row">
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('4')"><p>4</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('5')"><p>5</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('6')"><p>6</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('-')"><p>-</p></div>
-            </div>
-            <div class="row">
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('1')"><p>1</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('2')"><p>2</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('3')"><p>3</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('+')"><p>+</p></div>
-            </div>
-            <div class="row">
-                <div class="calculator-button"><p></p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="numberClicked('0')"><p>0</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="symbolClicked('-')"><p>,</p></div>
-                <div class="calculator-button calculator-button-clickable" onclick="calculate()"><p>=</p></div>
+            <div class="button-container">
+                <a class="button" href="../Index/index.html">See Pages List</a>
             </div>
         </div>
         <div class="column">
-            <div class="go-back-container">
-                <a class="button" href="../Index/index.html">See Pages List</a>
-            </div>
         </div>
     </div>
     <script src="script.js"></script>

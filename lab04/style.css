@@ -22,6 +22,8 @@
     flex:1;
     width: 100%;
     text-align: center;
+    padding: 10px;
+    border-radius: 5px; 
 }
 
 .row{
@@ -38,6 +40,7 @@
     flex: 1; /* Ustawienie elastycznego wzrostu */
     text-align: center;
     border-radius:10px;
+    transition: background-color 0.3s;
 }
 
 .calculator-display{
@@ -48,6 +51,7 @@
     text-align: center;
     height: 50px;
     border-radius:10px;
+    
 }
 
 .calculator-display h1{
@@ -62,4 +66,24 @@
 
 p{
     font-size: 25px;
+}
+
+.button-container{
+    padding-top: 50px;
+}
+
+a {
+    display: inline-block;       
+    background-color: #e74c3c;   
+    color: #ffffff;              
+    padding: 10px 20px;          
+    text-decoration: none;       
+    border-radius: 5px;          
+    font-weight: bold;           
+    text-align: center;          
+    transition: background-color 0.3s; /* Płynna zmiana koloru */
+}
+
+a:hover {
+    background-color: #c0392b;   /* Ciemniejszy odcień czerwieni po najechaniu */
 }

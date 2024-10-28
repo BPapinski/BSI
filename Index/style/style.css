@@ -25,14 +25,35 @@
     text-align: center;
 }
 
-.button {
-    width: 115px;
-    height: 25px;
-    background: #4E9CAF;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 25px;
+
+
+a {
+    display: inline-block;       
+    background-color: #e74c3c;   
+    color: #ffffff;              
+    padding: 10px 20px;          
+    text-decoration: none;       
+    border-radius: 5px;          
+    font-weight: bold;           
+    text-align: center;          
+    transition: background-color 0.3s; /* Płynna zmiana koloru */
+    width: 20%;
+}
+
+a:hover {
+    background-color: #c0392b;   /* Ciemniejszy odcień czerwieni po najechaniu */
+}
+
+
+h1 {
+    display: inline-block;       
+    background-color: #5ee04c;   
+    color: #ffffff;              
+    padding: 10px 20px;          
+    text-decoration: none;       
+    border-radius: 5px;          
+    font-weight: bold;           
+    text-align: center;          
+    transition: background-color 0.3s; /* Płynna zmiana koloru */
+    width: 15%;
 }

@@ -1,20 +1,14 @@
 var expresion = "";
 var lastCharIsSymbol = false;
+var hasComma = false;
 
 function clearDisplay(){
     expresion = ""
     document.getElementById("expression").innerHTML = expresion
 }
 
-function foo(){
-    alert("foo")
-}
-
-
 
 function numberClicked(number){
-    //alert("clicked number " + number)
-    //expresion += " "
     lastCharIsSymbol = false;
     expresion += number
 
@@ -26,8 +20,54 @@ function symbolClicked(symbol){
     if(lastCharIsSymbol){
         expresion = expresion.substring(0, expresion.length-1) // usuwa ostatni znak (symbol)
     }
+
     lastCharIsSymbol = true;
     expresion += symbol
+    document.getElementById("expression").innerHTML = expresion
+
+}
+
+
+function isSymbol(char){
+    if(char == "*"){
+        return true;
+    }
+    else if(char == "-"){
+        return true;
+    }
+    else if(char == "+"){
+        return true;
+    }
+    else if(char == "/"){
+        return true;
+    }
+
+
+
+}
+
+function commaClicked(symbol){
+
+    // trzeba sprawdzic czy fragment do ostatniego znaku nie posiada juz kropki
+    if(expresion.includes(".")){
+        // zawiera kropke
+        for(i = expresion.length-1; i>=0; i--){
+            if(isSymbol(expresion[i])){
+                break;
+            }
+            if(expresion[i] == "."){
+                alert("expression can't have 2 commas in one part")
+                return;
+            }
+        }
+    }
+
+    // dalej
+    if(lastCharIsSymbol){
+        expresion = expresion.substring(0, expresion.length-1) // usuwa ostatni znak (symbol)
+    }
+    lastCharIsSymbol = true;
+    expresion += '.'
     document.getElementById("expression").innerHTML = expresion
 }
 
