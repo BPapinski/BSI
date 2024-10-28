@@ -17,6 +17,13 @@ function numberClicked(number){
 
 
 function symbolClicked(symbol){
+    
+    if(expresion.length == 0){
+        alert("symbol cannot be first character in expression")
+        return;
+    }
+        
+    
     if(lastCharIsSymbol){
         expresion = expresion.substring(0, expresion.length-1) // usuwa ostatni znak (symbol)
     }
@@ -48,6 +55,15 @@ function isSymbol(char){
 
 function commaClicked(symbol){
 
+    if(expresion.length == 0){
+        alert("comma cannot be first character in expression")
+        return;
+    }
+
+    if(isSymbol(expresion[expresion.length-1])){
+        alert("comma cannot be placed just after the symbol")
+        return;
+    }
     // trzeba sprawdzic czy fragment do ostatniego znaku nie posiada juz kropki
     if(expresion.includes(".")){
         // zawiera kropke
