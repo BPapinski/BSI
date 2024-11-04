@@ -61,7 +61,7 @@ function isSymbol(char) {
 }
 
 function commaClicked(symbol){
-
+    expresion = expresion.toString();
     if(expresion.length == 0){
         alert("comma cannot be first character in expression")
         return;
@@ -72,7 +72,7 @@ function commaClicked(symbol){
         return;
     }
     // trzeba sprawdzic czy fragment do ostatniego znaku nie posiada juz kropki
-    if(expresion.includes(".")){
+    if(typeof expresion === "string" &&  expresion.includes(".")){
         // zawiera kropke
         for(i = expresion.length-1; i>=0; i--){
             if(isSymbol(expresion[i])){
@@ -102,7 +102,7 @@ function calculate(){
         return;
     }
     let result = eval(expresion);
-    expresion = result;
+    expresion = result.toString();
     //alert("result is: " + result)
     
     document.getElementById("expression").innerHTML = result
