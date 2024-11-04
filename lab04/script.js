@@ -1,20 +1,38 @@
-var expresion = "";
+var expresion = "0";
 var lastCharIsSymbol = false;
 var hasComma = false;
 
 function clearDisplay(){
-    expresion = ""
+    expresion = "0"
     document.getElementById("expression").innerHTML = expresion
 }
 
+function createdWithZeros(value){
+    for(var i = 0; i<value.length; i++){
+        if(value[i] != 0){
+            return false;
+        }
+    }
+    return true;
+
+}
 
 function numberClicked(number){
     if(expresion.length >= 20){
         alert("you can enter no more than 20 characters")
         return;
     }
+    if(createdWithZeros(expresion) && number == 0){
+        alert("that make no sense")
+        return;
+        
+    }
+    if (expresion === "0") {
+        expresion = number.toString(); // Zastąp zerem
+    } else {
+        expresion += number; // Dodaj liczbe
+    }
     lastCharIsSymbol = false;
-    expresion += number
     document.getElementById("expression").innerHTML = expresion
 }
 
@@ -38,19 +56,8 @@ function symbolClicked(symbol){
 }
 
 
-function isSymbol(char){
-    if(char == "*"){
-        return true;
-    }
-    else if(char == "-"){
-        return true;
-    }
-    else if(char == "+"){
-        return true;
-    }
-    else if(char == "/"){
-        return true;
-    }
+function isSymbol(char) {
+    return ["*", "-", "+", "/"].includes(char);
 }
 
 function commaClicked(symbol){
@@ -72,7 +79,7 @@ function commaClicked(symbol){
                 break;
             }
             if(expresion[i] == "."){
-                alert("expression can't have 2 commas in one part")
+                alert("one number cannot contain two dots in it")
                 return;
             }
         }
@@ -90,7 +97,10 @@ function commaClicked(symbol){
 function calculate(){
     expresion = document.getElementById("expression").innerHTML
     //alert("calculating " + expresion)
-
+    if(lastCharIsSymbol){
+        alert("finish your expression first")
+        return;
+    }
     let result = eval(expresion);
     expresion = result;
     //alert("result is: " + result)
