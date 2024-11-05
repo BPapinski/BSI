@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutStyle.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <style>
+        
+    </style>
+
+    <div class="container">
+
+
+        <form>
+            <div class="form-item" id="form-name">
+                <label><p>Imię</p></label><br>
+                <input type="text" id="imie" name="imie" placeholder="Podaj Imię..."><br>
+            </div>
+            <div class="form-item" id="form-surname">
+                <label><p>Nazwisko</p></label><br>
+                <input type="text" id="nazwisko" name="nazwisko" placeholder="Podaj Nazwisko..."><br>
+            </div>
+            <div class="form-item" id="form-street">
+                <label><p>Ulica</p></label><br>
+                <input type="text" id="ulica" name="ulica" placeholder="Podaj Ulicę..."><br>
+            </div>
+            <div class="form-item" id="form-house-number">
+                <label><p>Numer Domu</p></label><br>
+                <input type="number" id="nrDomu" name="nrDomu" placeholder="Podaj Numer Domu..."><br>
+            </div>
+            <div class="form-item" id="form-flat-number">
+                <label><p>Numer Mieszkania</p></label><br>
+                <input type="number" id="nrMieszkania" name="nrMieszkania" placeholder="Podaj Numer Mieszkania..."><br>
+            </div>
+            <div class="form-item" id="form-phone-number">
+                <label><p>Numer Telefonu</p></label><br>
+                <input type="number" id="nrTelefonu" name="nrTelefonu" placeholder="Podaj Numer Telefonu..."><br>
+            </div>
+            <div class="form-item" id="form-date">
+                <label><p>Podaj Date Urodzenia:</p></label><br>
+                <input id="dataUrodzenia" type="datetime-local"><br>
+            </div>
+            <div class="form-item" id="form-license">
+                <label><p>Czy posiadasz prawo jazdy ?</p></label>
+                <input type="checkbox"><br>
+            </div>
+            <div class="form-item" id="form-password">
+                <label><p>Hasło</p></label><br>
+                <input id="haslo" type="password"><br>
+            </div>           
+            <div class="form-item">
+                <label for="cars"><p>Płeć:</p></label>
+                <select>
+                    <option value="volvo">Kobieta</option>
+                    <option value="saab">Mężczyzna</option>
+                </select>
+            </div>
+            <div class="form-item" id="form-city">
+                <label><p>Miasto:</p></label><br>
+                <input type="text" id="Miasto" name="Miasto" placeholder="..."><br>
+            </div>
+            <div class="form-item" id="form-country">
+                <label><p>Państwo:</p></label><br>
+                <input type="text" id="Panstwo" name="Panstwo" placeholder="..."><br>
+            </div>
+        </form>
+        <div class="go-back-container">
+            <a class="button" href="../Index/index.html">See Pages List</a>
+        </div>
+        <button onclick="Validate()">Submit</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
