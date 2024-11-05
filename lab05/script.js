@@ -1,14 +1,22 @@
 function Validate(){
-    ValidateName();
-    ValidateSurname();
-    ValidateStreet();
-    ValidateFlatNumber();
-    ValidateHouseNumber();
-    ValidatePhoneNumber();
-    ValidateDate();
-    ValidatePassword();
-    ValidateCity();
-    ValidateCountry();
+    var validName = ValidateName();
+    var validSurname = ValidateSurname();
+    var validStreet = ValidateStreet();
+    var validFlatnumber =  ValidateFlatNumber();
+    var validHousenumber = ValidateHouseNumber();
+    var validPhoneNumber = ValidatePhoneNumber();
+    var validDate = ValidateDate();
+    var validPassword = ValidatePassword();
+    var validCity = ValidateCity();
+    var validCounrty = ValidateCountry();
+
+    if(validName && validSurname && validStreet && validFlatnumber && validHousenumber && validPhoneNumber && validDate && validPassword && validCity && validCounrty){
+        console.log("wszystko git ")
+        window.location.reload();
+    }
+    else{
+        return false;
+    }
 }
 
 function ValidateName() {
@@ -25,6 +33,7 @@ function ValidateName() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Imię powinno zaczynać się wielką literą, a reszta liter powinna być mała.");
         if (!errorParagraph) {
@@ -34,6 +43,7 @@ function ValidateName() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -52,6 +62,7 @@ function ValidateSurname() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Nazwisko powinno zaczynać się wielką literą i zawierać tylko litery (i ewentualnie kreskę).");
         if (!errorParagraph) {
@@ -61,6 +72,7 @@ function ValidateSurname() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -78,6 +90,7 @@ function ValidateStreet() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Każde słowo nazwy ulicy powinno zaczynać się wielką literą.");
         if (!errorParagraph) {
@@ -87,6 +100,7 @@ function ValidateStreet() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -104,6 +118,7 @@ function ValidateHouseNumber() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Numer domu jest niepoprawny.");
         if (!errorParagraph) {
@@ -113,6 +128,7 @@ function ValidateHouseNumber() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -130,6 +146,7 @@ function ValidateFlatNumber() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Numer mieszkania jest niepoprawny.");
         if (!errorParagraph) {
@@ -139,6 +156,7 @@ function ValidateFlatNumber() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -157,6 +175,7 @@ function ValidatePhoneNumber() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Numer telefonu powinien składać się z 9 cyfr.");
         if (!errorParagraph) {
@@ -166,6 +185,7 @@ function ValidatePhoneNumber() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -183,6 +203,7 @@ function ValidateDate() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Data jest niepoprawna.");
         if (!errorParagraph) {
@@ -192,6 +213,7 @@ function ValidateDate() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -218,6 +240,7 @@ function ValidatePassword() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Hasło powinno zawierać wielką literę, małą literę, cyfrę oraz znak specjalny.");
         if (!errorParagraph) {
@@ -227,6 +250,7 @@ function ValidatePassword() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -244,6 +268,7 @@ function ValidateCity() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Każde słowo nazwy miasta powinno zaczynać się wielką literą.");
         if (!errorParagraph) {
@@ -253,6 +278,7 @@ function ValidateCity() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
 
@@ -270,6 +296,7 @@ function ValidateCountry() {
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
+        return true;
     } else {
         console.log("Każde słowo nazwy państwa powinno zaczynać się wielką literą, a reszta liter powinna być mała.");
         if (!errorParagraph) {
@@ -279,5 +306,6 @@ function ValidateCountry() {
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
+        return false;
     }
 }
