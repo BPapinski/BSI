@@ -246,7 +246,7 @@ function ValidatePassword() {
         if (!errorParagraph) {
             errorParagraph = document.createElement("p");
             errorParagraph.id = "error-haslo";
-            errorParagraph.textContent = "Hasło powinno zawierać wielką literę, małą literę, cyfrę oraz znak specjalny.";
+            errorParagraph.textContent = "Hasło powinno zawierać wielką literę, małą literę, cyfrę, znak specjalny oraz mieć co najmniej 9 znaków.";
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
