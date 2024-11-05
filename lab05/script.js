@@ -14,16 +14,14 @@ function Validate(){
 function ValidateName() {
     var inputValue = document.getElementById("imie").value;
     var input = document.getElementById("imie");
-    var pattern = /^[A-Z][a-z]+$/;
+    var pattern = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+$/;
     var wynik = pattern.test(inputValue);
     var container = document.getElementById("form-name");
     var errorParagraph = document.getElementById("error-imie");
-    
+
     if (wynik) {
         console.log("Imię jest poprawne.");
-
         input.classList.remove("input-red");
-
         if (errorParagraph) {
             container.removeChild(errorParagraph);
         }
@@ -31,7 +29,7 @@ function ValidateName() {
         console.log("Imię powinno zaczynać się wielką literą, a reszta liter powinna być mała.");
         if (!errorParagraph) {
             errorParagraph = document.createElement("p");
-            errorParagraph.id = "error-imie"; 
+            errorParagraph.id = "error-imie";
             errorParagraph.textContent = "Imię powinno zaczynać się wielką literą, a reszta liter powinna być mała.";
             container.appendChild(errorParagraph);
         }
@@ -43,7 +41,7 @@ function ValidateName() {
 function ValidateSurname() {
     var inputValue = document.getElementById("nazwisko").value;
     var input = document.getElementById("nazwisko");
-    var pattern = /^[A-Z][a-z]+(-[A-Z][a-z]+)?$/;
+    var pattern = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(-[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)?$/;
     var wynik = pattern.test(inputValue);
     var container = document.getElementById("form-surname");
     var errorParagraph = document.getElementById("error-nazwisko");
@@ -55,10 +53,11 @@ function ValidateSurname() {
             container.removeChild(errorParagraph);
         }
     } else {
+        console.log("Nazwisko powinno zaczynać się wielką literą i zawierać tylko litery (i ewentualnie kreskę).");
         if (!errorParagraph) {
             errorParagraph = document.createElement("p");
             errorParagraph.id = "error-nazwisko";
-            errorParagraph.textContent = "Nazwisko powinno zaczynać się wielką literą, zawierać tylko litery (i ewentualnie średnik).";
+            errorParagraph.textContent = "Nazwisko powinno zaczynać się wielką literą i zawierać tylko litery (i ewentualnie kreskę).";
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
@@ -68,7 +67,7 @@ function ValidateSurname() {
 function ValidateStreet() {
     var inputValue = document.getElementById("ulica").value;
     var input = document.getElementById("ulica");
-    var pattern = /^[A-Z][a-z]+( [A-Z][a-z]+)?$/;
+    var pattern = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+( [A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)?$/;
     var wynik = pattern.test(inputValue);
     var container = document.getElementById("form-street");
     var errorParagraph = document.getElementById("error-ulica");
@@ -80,11 +79,11 @@ function ValidateStreet() {
             container.removeChild(errorParagraph);
         }
     } else {
-        console.log("Każdy wyraz stanowiący nazwę ulicy powinien zaczynać się z wielkiej litery, a ulica powinna mieć przynajmniej 2 znaki długości.");
+        console.log("Każde słowo nazwy ulicy powinno zaczynać się wielką literą.");
         if (!errorParagraph) {
             errorParagraph = document.createElement("p");
             errorParagraph.id = "error-ulica";
-            errorParagraph.textContent = "Każdy wyraz stanowiący nazwę ulicy powinien zaczynać się z wielkiej litery, a ulica powinna mieć przynajmniej 2 znaki długości.";
+            errorParagraph.textContent = "Każde słowo nazwy ulicy powinno zaczynać się wielką literą.";
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
@@ -234,7 +233,7 @@ function ValidatePassword() {
 function ValidateCity() {
     var inputValue = document.getElementById("Miasto").value;
     var input = document.getElementById("Miasto");
-    var pattern = /^[A-Z][a-z]+( [A-Z][a-z]+)?$/;
+    var pattern = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+( [A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)?$/;
     var wynik = pattern.test(inputValue);
     var container = document.getElementById("form-city");
     var errorParagraph = document.getElementById("error-Miasto");
@@ -246,11 +245,11 @@ function ValidateCity() {
             container.removeChild(errorParagraph);
         }
     } else {
-        console.log("Każde słowo nazwy miasta powinno zaczynać się wielką literą, a reszta liter powinna być mała.");
+        console.log("Każde słowo nazwy miasta powinno zaczynać się wielką literą.");
         if (!errorParagraph) {
             errorParagraph = document.createElement("p");
             errorParagraph.id = "error-Miasto";
-            errorParagraph.textContent = "Każde słowo nazwy miasta powinno zaczynać się wielką literą, a reszta liter powinna być mała.";
+            errorParagraph.textContent = "Każde słowo nazwy miasta powinno zaczynać się wielką literą.";
             container.appendChild(errorParagraph);
         }
         input.classList.add("input-red");
