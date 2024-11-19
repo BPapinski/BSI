@@ -38,6 +38,7 @@ a {
     transition: background-color 0.3s;
     max-width: 100%; /* Umożliwia dopasowanie szerokości do rodzica */
     word-wrap: break-word; /* Zapewnia łamanie długich słów */
+    width: 30%;
 }
 
     /* Efekt hover dla linków */

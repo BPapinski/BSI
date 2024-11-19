@@ -23,6 +23,24 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+body {
+	font-size: 16px;
+}
+
+/* Zmniejsz czcionkê na mniejszych ekranach */
+@media (max-width: 768px) {
+	body {
+		font-size: 14px; /* Zmniejsz rozmiar czcionki na urz¹dzeniach o szerokoœci ekranu 768px i mniej */
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 12px; /* Zmniejsz czcionkê jeszcze bardziej na urz¹dzeniach o szerokoœci ekranu 480px i mniej */
+	}
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
