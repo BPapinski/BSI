@@ -3,46 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
-    
-    
-    
+    <title>Available Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .header h2 {
+                color: #333;
+                margin: 0;
+            }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+            .row:last-child {
+                border-bottom: none;
+            }
+
+        .column-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .column-link a {
+            color: #555;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+            .column-link a:hover {
+                color: #007bff;
+            }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="column"></div>
-            <div class="column visible"><h2>Available pages</h2></div>
-            <div class="column"></div>
+        <div class="header">
+            <h2>Available Pages</h2>
         </div>
+
         <div class="row">
-            <div class="column"><h1>lab01</h1></div>
-            <div class="column"><a href="../lab01/index.html">Index</a></div>
-            <div class="column"></div>
+            <div class="column-title">Lab01</div>
+            <div class="column-link"><a href="../lab01/index.html">Index</a></div>
         </div>
+
         <div class="row">
-            <div class="column"><h1>lab02</h1></div>
-            <div class="column"><a href="../lab02/form/index.html">Form</a></div>
-            <div class="column"><a href="../lab02/grid/index.html">Grid</a></div>
+            <div class="column-title">Lab02</div>
+            <div class="column-link">
+                <a href="../lab02/form/index.html">Form</a>
+                <a href="../lab02/grid/index.html">Grid</a>
+            </div>
         </div>
+
         <div class="row">
-            <div class="column"><h1>lab03</h1></div>
-            <div class="column"><a href="../lab03/about.html">Form</a></div>
-            <div class="column"><a href="../lab03/index.html">Grid</a></div>
+            <div class="column-title">Lab03</div>
+            <div class="column-link">
+                <a href="../lab03/about.html">Form</a>
+                <a href="../lab03/index.html">Grid</a>
+            </div>
         </div>
+
         <div class="row">
-            <div class="column"><h1>lab04</h1></div>
-            <div class="column"><a href="../lab04/index.html">Calculator</a></div>
-            <div class="column"></div>
+            <div class="column-title">Lab04</div>
+            <div class="column-link"><a href="../lab04/index.html">Calculator</a></div>
         </div>
+
         <div class="row">
-            <div class="column"><h1>lab04</h1></div>
-            <div class="column"><a href="../lab05/index.html">Validated Form</a></div>
-            <div class="column"></div>
+            <div class="column-title">Lab05</div>
+            <div class="column-link"><a href="../lab05/index.html">Validated Form</a></div>
         </div>
-        
     </div>
 </body>
 </html>
