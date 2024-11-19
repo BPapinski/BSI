@@ -1,4 +1,4 @@
-
+/* Ogólne ustawienia dla kontenera */
 .container {
     display: flex;
     flex-direction: column;
@@ -13,47 +13,66 @@
     margin-bottom: 10px;
 }
 
-.visible{
-        background-color: antiquewhite;
+.visible {
+    background-color: antiquewhite;
 }
 
+/* Kolumny z elastycznym układem */
 .column {
-
     padding: 10px;
     margin: 5px;
-    flex: 1; /* Ustawienie elastycznego wzrostu */
+    flex: 1;
     text-align: center;
 }
 
-
-
+/* Styl dla linków */
 a {
-    display: inline-block;       
-    background-color: #e74c3c;   
-    color: #ffffff;              
-    padding: 10px 20px;          
-    text-decoration: none;       
-    border-radius: 5px;          
-    font-weight: bold;           
-    text-align: center;          
-    transition: background-color 0.3s; /* Płynna zmiana koloru */
-    width: 20%;
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    max-width: 100%; /* Umożliwia dopasowanie szerokości do rodzica */
+    word-wrap: break-word; /* Zapewnia łamanie długich słów */
 }
 
-a:hover {
-    background-color: #c0392b;   /* Ciemniejszy odcień czerwieni po najechaniu */
-}
+    /* Efekt hover dla linków */
+    a:hover {
+        background-color: #c0392b;
+    }
 
-
+/* Styl dla nagłówków */
 h1 {
-    display: inline-block;       
-    background-color: #5ee04c;   
-    color: #ffffff;              
-    padding: 10px 20px;          
-    text-decoration: none;       
-    border-radius: 5px;          
-    font-weight: bold;           
-    text-align: center;          
-    transition: background-color 0.3s; /* Płynna zmiana koloru */
-    width: 15%;
+    display: inline-block;
+    background-color: #5ee04c;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    max-width: 100%; /* Umożliwia dopasowanie szerokości do rodzica */
+    word-wrap: break-word; /* Zapewnia łamanie długich słów */
+}
+
+/* Responsywne zmiany dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Zmienia układ w kolumny na mniejszych ekranach */
+        align-items: center;
+    }
+
+    .column {
+        width: 100%; /* Kolumny zajmują 100% szerokości */
+    }
+
+    a, h1 {
+        width: 80%; /* Linki i nagłówki będą miały 80% szerokości kontenera */
+        margin: 10px 0; /* Dodatkowa przestrzeń między elementami */
+    }
 }
