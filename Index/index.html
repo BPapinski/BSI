@@ -57,9 +57,20 @@
             transition: color 0.3s ease;
         }
 
-            .column-link a:hover {
-                color: #007bff;
-            }
+        .column-link a:hover {
+            color: #007bff;
+        }
+
+        .disabled-link {
+            pointer-events: none; /* Blokuje interakcję z linkiem */
+            color: #999; /* Ustala wyblakły kolor */
+            text-decoration: none; /* Usuwa podkreślenie, jeśli jest */
+        }
+        
+        /* Dodatkowy styl, aby wskazać, że element jest wyłączony */
+        .disabled-link[aria-disabled="true"] {
+            opacity: 0.5; /* Wygląd wyblakłego linku */
+        }
     </style>
 </head>
 <body>
@@ -101,7 +112,14 @@
 
         <div class="row">
             <div class="column-title">Lab06</div>
-            <div class="column-link"><a href="http://bpapinski2.cba.pl">PHP, Login + Form</a></div>
+            <div class="column-link">
+                <a href="http://bpapinski2.cba.pl" class="disabled-link" aria-disabled="true">PHP, Login + Form</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-title">Lab07</div>
+            <div class="column-link"><a href="http://bpapinski2.cba.pl">PHP, Record update, post, delete</a></div>
         </div>
     </div>
 </body>
