@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="example.xsl"?>
+<Data>
+  <Date>02-12-2024</Date>
+  <Buyer>
+    <Name>Jan Kowalski</Name>
+    <Address>Rakowiecka 161C</Address>
+  </Buyer>
+  <Services>
+    <Service>
+      <Lp>1</Lp>
+      <Name>Service A</Name>
+      <PPZ>TAK</PPZ>
+      <Miara>15</Miara>
+      <Amount>10</Amount>
+      <CenaJednostkowa>1.25</CenaJednostkowa>
+      <Sp>8</Sp>
+    </Service>
+    <Service>
+      <Lp>2</Lp>
+      <Name>Service B</Name>
+      <PPZ>NIE</PPZ>
+      <Miara>20</Miara>
+      <Amount>7</Amount>
+      <CenaJednostkowa>2.50</CenaJednostkowa>
+      <Sp>5</Sp>
+    </Service>
+    <Service>
+      <Lp>3</Lp>
+      <Name>Service C</Name>
+      <PPZ>TAK</PPZ>
+      <Miara>5</Miara>
+      <Amount>12</Amount>
+      <CenaJednostkowa>0.80</CenaJednostkowa>
+      <Sp>6</Sp>
+    </Service>
+    <Service>
+      <Lp>4</Lp>
+      <Name>Service D</Name>
+      <PPZ>NIE</PPZ>
+      <Miara>10</Miara>
+      <Amount>8</Amount>
+      <CenaJednostkowa>1.75</CenaJednostkowa>
+      <Sp>10</Sp>
+    </Service>
+    <Service>
+      <Lp>5</Lp>
+      <Name>Service E</Name>
+      <PPZ>TAK</PPZ>
+      <Miara>30</Miara>
+      <Amount>3</Amount>
+      <CenaJednostkowa>3.00</CenaJednostkowa>
+      <Sp>12</Sp>
+    </Service>
+</Services>
+
+</Data>
